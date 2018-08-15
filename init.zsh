@@ -117,3 +117,6 @@ function precmd () {
   echo -ne "$window_title"
 }
 
+source <(kubectl completion zsh)
+source <(helm completion zsh)
+
