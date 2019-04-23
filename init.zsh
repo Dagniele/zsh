@@ -120,3 +120,9 @@ function precmd () {
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 
+. /usr/share/autojump/autojump.sh
+
+alias k='kubectl'
+alias kn='kubens'
+alias linked='ll node_modules | grep sir'
+
