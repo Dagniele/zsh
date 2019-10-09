@@ -124,5 +124,8 @@ source <(helm completion zsh)
 
 alias k='kubectl'
 alias kn='kubens'
-alias linked='ll node_modules | grep sir'
+alias linked='ll node_modules | grep oui'
 
+PATH=~/development/flutter/bin:$PATH
+export PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$PATH":"$HOME/development/flutter/.pub-cache/bin"
