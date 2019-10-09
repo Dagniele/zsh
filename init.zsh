@@ -100,10 +100,13 @@ source $ZSH/oh-my-zsh.sh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-export NVM_DIR="/home/daniele/.nvm"
+USER_FOLDER=$(pwd)
+
+export NVM_DIR="$USER_FOLDER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 PATH=~/bin:$PATH
+PATH=~/.bin:$PATH
 
 DEFAULT_USER=`whoami`
 
@@ -120,7 +123,9 @@ function precmd () {
 source <(kubectl completion zsh)
 source <(helm completion zsh)
 
-. /usr/share/autojump/autojump.sh
+if [ "$(uname 2> /dev/null)" != "Darwin" ]; then
+  . /usr/share/autojump/autojump.sh
+fi
 
 alias k='kubectl'
 alias kn='kubens'
