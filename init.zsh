@@ -102,7 +102,7 @@ export EDITOR="$VISUAL"
 
 USER_FOLDER=$(pwd)
 
-export NVM_DIR="$USER_FOLDER/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 PATH=~/bin:$PATH
@@ -130,6 +130,10 @@ fi
 alias k='kubectl'
 alias kn='kubens'
 alias linked='ll node_modules | grep oui'
+alias mvn='noglob mvn'
+export REACT_APP_API_URL="http://10.12.121.244:8089"
+export REACT_APP_WEBSOCKET_BROKER_URL="ws://10.12.121.244:8089"
+export REACT_APP_BASE_API="http://10.12.121.244:8089"
 
 PATH=~/development/flutter/bin:$PATH
 export PATH="$PATH:/usr/lib/dart/bin"
