@@ -7,7 +7,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="lambda-gitster/lambda-gitster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -137,4 +137,14 @@ export REACT_APP_BASE_API="http://10.12.121.244:8089"
 
 PATH=~/development/flutter/bin:$PATH
 export PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$PATH:/snap/bin"
 export PATH="$PATH":"$HOME/development/flutter/.pub-cache/bin"
+
+#local host_name="%{$fg[cyan]%}λ"
+#local path_string="%{$fg[yellow]%}%~"
+#local prompt_string="»"
+
+# Make prompt_string red if the previous command failed.
+#local return_status="%(?:%{$fg[blue]%}$prompt_string:%{$fg[red]%}$prompt_string)"
+
+#PROMPT='${host_name} ${path_string} ${return_status} %{$reset_color%}'
